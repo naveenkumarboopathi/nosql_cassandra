@@ -2,10 +2,13 @@ package com.example.demo.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.example.demo.entity.Customer;
 import com.example.demo.repository.CustomerRepository;
 import com.example.demo.service.CustomerService;
 
+@Component
 public class CustomerServiceImpl implements CustomerService{
 
 	CustomerRepository customerRepository;
