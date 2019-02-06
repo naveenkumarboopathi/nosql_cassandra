@@ -1,0 +1,9 @@
+spring:
+  data:
+    cassandra:
+      keyspaceName: sample
+      contactPoints: localhost
+      port: 9042
+      schemaAction: CREATE_IF_NOT_EXISTS
+  jpa:
+    show-sql: true
