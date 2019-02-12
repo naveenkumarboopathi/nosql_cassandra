@@ -8,7 +8,7 @@ package com.example.demo.entity;
 
 import java.io.Serializable;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import lombok.Getter;
@@ -18,9 +18,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Customer implements Serializable {
-	
-	@Id
-	private Long id;
+
+    private static final long serialVersionUID = 1L;
+
+    @PrimaryKey
+    private Long id;
 
 	private String firstName;
 

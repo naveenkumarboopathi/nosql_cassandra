@@ -1,13 +1,17 @@
 package com.example.demo.service;
 
-import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 import com.example.demo.entity.Customer;
 
 public interface CustomerService {
 
-	public List<Customer> findAll();
+	ResponseEntity<?> findCustomer(Long customerId);
 
-	public Customer findById(Long customerId);
+	ResponseEntity<?> insertCustomer(Customer customer);
+
+	ResponseEntity<?> updateCustomer(Customer customer);
+
+	ResponseEntity<?> deleteCustomer(Long customerId);
 
 }
